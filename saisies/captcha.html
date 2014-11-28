@@ -1,0 +1,11 @@
+<img id="captcha" src="#CHEMIN{lib/securimage/securimage_show.php}" alt="CAPTCHA Image" />
+
+[(#REM) Ici on force le nom de l'input  ]
+[(#INCLURE{fond=saisies/input,
+env,
+type=text,
+nom=captcha_code,
+id=captcha,
+class=[(#ENV{class})]})]
+
+<a href="#" onclick="document.getElementById('captcha').src = '#CHEMIN{lib/securimage/securimage_show.php}?' + Math.random(); return false"><:securimage:changer_image:></a>
