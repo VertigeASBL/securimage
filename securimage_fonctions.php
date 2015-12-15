@@ -15,7 +15,7 @@ function securimage_inserer($formulaire, $contexte) {
     // Ne pas ce prendre la tete, demander un coup de main à query_path
     include_spip('inc/querypath');
     // Récupérer le dernier <li> pour ajouter un LI le captcha
-    $qp = spip_query_path($formulaire, 'li:last-child');
+    $qp = spip_query_path($formulaire, 'ul:last-child li:last-child');
 
     // On récupère le html du captcha via la saisie qui va bien
     include_spip('inc/saisies');
